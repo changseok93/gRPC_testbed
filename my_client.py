@@ -15,7 +15,7 @@ def run():
         stub = my_protobuf_pb2_grpc.transactionTestStub(channel)
         
         I2I_response = stub.IimageOimage(my_protobuf_pb2.ImageType(format='jpg', data = input_image))
-        T2T_response = stub.ItextOtext(my_protobuf_pb2.TextType(data=input_text))
+        T2T_response = stub.ItextOtext(my_protobuf_pb2.TextType(data='input_text'))
         J2J_response = stub.IjsonOjson(my_protobuf_pb2.JSONType(data=input_json))
         
     print('------------------gRPC & protobuf3 test------------------')
