@@ -15,7 +15,7 @@ class transactionTest(my_protobuf_pb2_grpc.transactionTestServicer):
         file = open('output_data_{}.jpg'.format(self.call_counter), 'wb')
         file.write(ImageType.data)
         file.close()
-        self.file_counter+=1
+        self.call_counter+=1
         return my_protobuf_pb2.ImageType(format = ImageType.format, data = ImageType.data)
     
     def ItextOtext(self, TextType, context):
