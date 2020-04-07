@@ -12,22 +12,21 @@ class transactionTest(my_protobuf_pb2_grpc.transactionTestServicer):
         self.call_counter = 1
 
     def IimageOimage(self, ImageType, context):
-        file = open('output_data_{}.jpg'.format(self.call_counter), 'wb')
+        file = open('output/output_data.{}'.format(ImageType.format), 'wb')
         file.write(ImageType.data)
         file.close()
-        self.call_counter+=1
         return my_protobuf_pb2.ImageType(format = ImageType.format, data = ImageType.data)
     
     def ItextOtext(self, TextType, context):
-        ###
-        # do something here
-        ###
+        file = open('output/README.txt')
+        file.write(TextType.data)
+        file.close()
         return my_protobuf_pb2.TextType(data = TextType.data + ' has been received')
     
     def IjsonOjson(self, JSONType, context):
-        ###
-        # do something here
-        ###
+        file = open('output/output_data.json', 'wb')
+        file.write(JSONType.data)
+        file.close()
         return my_protobuf_pb2.JSONType(data = JSONType.data)
 
 def serve():

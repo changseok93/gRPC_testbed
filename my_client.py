@@ -18,6 +18,12 @@ def run():
         T2T_response = stub.ItextOtext(my_protobuf_pb2.TextType(data=input_text))
         J2J_response = stub.IjsonOjson(my_protobuf_pb2.JSONType(data=input_json))
         
+    print('------------------gRPC & protobuf3 test------------------')
+    print('1. Text type transaction test : {}'.format(T2T_response.data))
+    print('1. Image type transaction test : {}'.format(I2I_response.data))
+    print('1. JSON type transaction test : {}'.format(J2J_response.data))
+    print('------------------end of test------------------')
+        
         
 
 if __name__ == '__main__':
