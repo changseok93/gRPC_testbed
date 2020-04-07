@@ -8,11 +8,17 @@ import my_protobuf_pb2_grpc
 
 def run():
     input_image = open('input_data.jpg', 'rb').read()
+    input_json = open('input_data.json', 'rb').read()
+    input_text = 'COVID19 infector specifications'
     
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = my_protobuf_pb2_grpc.transactionTestStub(channel)
-        response = stub.IimageOtext(my_protobuf_pb2.ImageType(format='jpg', data = input_image))
-    print('{} send complete'.format(response.format))
+        
+        I2I_response = stub.IimageOimage(my_protobuf_pb2.ImageType(format='jpg', data = input_image))
+        T2T_response = stub.ItextOtext(my_protobuf_pb2.TextType(data=input_text))
+        J2J_response = stub.IjsonOjson(my_protobuf_pb2.JSONType(data=input_json))
+        
+        
 
 if __name__ == '__main__':
     run()

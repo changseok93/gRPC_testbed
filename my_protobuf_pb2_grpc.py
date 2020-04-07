@@ -14,10 +14,20 @@ class transactionTestStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.IimageOtext = channel.unary_unary(
-        '/playground.transactionTest/IimageOtext',
+    self.IimageOimage = channel.unary_unary(
+        '/playground.transactionTest/IimageOimage',
         request_serializer=my__protobuf__pb2.ImageType.SerializeToString,
         response_deserializer=my__protobuf__pb2.ImageType.FromString,
+        )
+    self.ItextOtext = channel.unary_unary(
+        '/playground.transactionTest/ItextOtext',
+        request_serializer=my__protobuf__pb2.TextType.SerializeToString,
+        response_deserializer=my__protobuf__pb2.TextType.FromString,
+        )
+    self.IjsonOjson = channel.unary_unary(
+        '/playground.transactionTest/IjsonOjson',
+        request_serializer=my__protobuf__pb2.JSONType.SerializeToString,
+        response_deserializer=my__protobuf__pb2.JSONType.FromString,
         )
 
 
@@ -25,7 +35,21 @@ class transactionTestServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def IimageOtext(self, request, context):
+  def IimageOimage(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ItextOtext(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def IjsonOjson(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -35,10 +59,20 @@ class transactionTestServicer(object):
 
 def add_transactionTestServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'IimageOtext': grpc.unary_unary_rpc_method_handler(
-          servicer.IimageOtext,
+      'IimageOimage': grpc.unary_unary_rpc_method_handler(
+          servicer.IimageOimage,
           request_deserializer=my__protobuf__pb2.ImageType.FromString,
           response_serializer=my__protobuf__pb2.ImageType.SerializeToString,
+      ),
+      'ItextOtext': grpc.unary_unary_rpc_method_handler(
+          servicer.ItextOtext,
+          request_deserializer=my__protobuf__pb2.TextType.FromString,
+          response_serializer=my__protobuf__pb2.TextType.SerializeToString,
+      ),
+      'IjsonOjson': grpc.unary_unary_rpc_method_handler(
+          servicer.IjsonOjson,
+          request_deserializer=my__protobuf__pb2.JSONType.FromString,
+          response_serializer=my__protobuf__pb2.JSONType.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

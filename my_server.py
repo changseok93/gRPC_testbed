@@ -9,14 +9,26 @@ import my_protobuf_pb2_grpc
 
 class transactionTest(my_protobuf_pb2_grpc.transactionTestServicer):
     def __init__(self):
-        self.file_counter = 1
+        self.call_counter = 1
 
-    def IimageOtext(self, img, context):
-        file = open('output_data_{}.jpg'.format(self.file_counter), 'wb')
+    def IimageOimage(self, ImageType, context):
+        file = open('output_data_{}.jpg'.format(self.call_counter), 'wb')
         file.write(img.data)
         file.close()
         self.file_counter+=1
-        return my_protobuf_pb2.ImageType(format = img.format, data = img.data)
+        return my_protobuf_pb2.ImageType(format = ImageType.format, data = ImageType.data)
+    
+    def ItextOtext(self, TextType, context):
+        ###
+        # do something here
+        ###
+        return my_protobuf_pb2.TextType(data = TextType.data + ' has been received')
+    
+    def IjsonOjson(self, JSONType, context):
+        ###
+        # do something here
+        ###
+        return my_protobuf_pb2.JSONType(data = JSONType.data)
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

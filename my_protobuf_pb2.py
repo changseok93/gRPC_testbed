@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='playground',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x11my_protobuf.proto\x12\nplayground\")\n\tImageType\x12\x0e\n\x06\x66ormat\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x18\n\x08TextType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\x18\n\x08JSONType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x32P\n\x0ftransactionTest\x12=\n\x0bIimageOtext\x12\x15.playground.ImageType\x1a\x15.playground.ImageType\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x11my_protobuf.proto\x12\nplayground\")\n\tImageType\x12\x0e\n\x06\x66ormat\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x18\n\x08TextType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\x18\n\x08JSONType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x32\xc9\x01\n\x0ftransactionTest\x12>\n\x0cIimageOimage\x12\x15.playground.ImageType\x1a\x15.playground.ImageType\"\x00\x12:\n\nItextOtext\x12\x14.playground.TextType\x1a\x14.playground.TextType\"\x00\x12:\n\nIjsonOjson\x12\x14.playground.JSONType\x1a\x14.playground.JSONType\"\x00\x62\x06proto3'
 )
 
 
@@ -157,16 +157,34 @@ _TRANSACTIONTEST = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=128,
-  serialized_end=208,
+  serialized_start=129,
+  serialized_end=330,
   methods=[
   _descriptor.MethodDescriptor(
-    name='IimageOtext',
-    full_name='playground.transactionTest.IimageOtext',
+    name='IimageOimage',
+    full_name='playground.transactionTest.IimageOimage',
     index=0,
     containing_service=None,
     input_type=_IMAGETYPE,
     output_type=_IMAGETYPE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ItextOtext',
+    full_name='playground.transactionTest.ItextOtext',
+    index=1,
+    containing_service=None,
+    input_type=_TEXTTYPE,
+    output_type=_TEXTTYPE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='IjsonOjson',
+    full_name='playground.transactionTest.IjsonOjson',
+    index=2,
+    containing_service=None,
+    input_type=_JSONTYPE,
+    output_type=_JSONTYPE,
     serialized_options=None,
   ),
 ])

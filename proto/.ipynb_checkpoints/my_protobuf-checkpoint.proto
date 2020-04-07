@@ -4,7 +4,9 @@ package playground;
 
 service transactionTest {
 
-    rpc IimageOtext (ImageType) returns (ImageType) {}
+    rpc IimageOimage (ImageType) returns (ImageType) {}
+    rpc ItextOtext (TextType) returns (TextType) {}
+    rpc IjsonOjson (JSONType) returns (JSONType) {}
 }
 
 message ImageType {
