@@ -18,10 +18,10 @@ class transactionTest(my_protobuf_pb2_grpc.transactionTestServicer):
         return my_protobuf_pb2.ImageType(format = ImageType.format, data = ImageType.data)
     
     def ItextOtext(self, TextType, context):
-        file = open('output/README.txt', 'wb')
+        file = open('output/README.txt', 'w')
         file.write(TextType.data)
         file.close()
-        return my_protobuf_pb2.TextType(data = TextType.data)
+        return my_protobuf_pb2.TextType(data = TextType.data + ' has been received')
     
     def IjsonOjson(self, JSONType, context):
         file = open('output/output_data.json', 'wb')
