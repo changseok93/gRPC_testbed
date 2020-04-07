@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package playground;
+
+service Image_parser {
+
+    rpc getImage (ImageRequest) returns (ImageReply) {}
+}
+
+message ImageRequest {
+    bytes File = 1; 
+}
+
+message ImageReply {
+    string result = 1;
+}
