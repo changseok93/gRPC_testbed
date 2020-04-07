@@ -13,7 +13,7 @@ class transactionTest(my_protobuf_pb2_grpc.transactionTestServicer):
 
     def IimageOimage(self, ImageType, context):
         file = open('output_data_{}.jpg'.format(self.call_counter), 'wb')
-        file.write(img.data)
+        file.write(ImageType.data)
         file.close()
         self.file_counter+=1
         return my_protobuf_pb2.ImageType(format = ImageType.format, data = ImageType.data)
