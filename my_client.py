@@ -8,7 +8,7 @@ import my_protobuf_pb2_grpc
 
 def run():
     input_image = open('input_data.jpg', 'rb')
-    input_image = data.read()
+    input_image = input_image.read()
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = my_protobuf_pb2_grpc.transactionTestStub(channel)
         response = stub.IimageOtext(my_protobuf_pb2.ImageType(format='jpg', data = input_image))
