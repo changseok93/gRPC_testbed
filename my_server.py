@@ -11,7 +11,7 @@ class ImageIO(my_protobuf_pb2_grpc.transactionTestServicer):
     def __init__(self):
         self.file_counter = 1
 
-    def getImage(self, img, context):
+    def IimageOtext(self, img, context):
         file = open('output_data_{}.jpg'.format(self.file_counter), 'wb')
         file.write(img.File)
         file.close()
