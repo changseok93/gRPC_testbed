@@ -18,22 +18,29 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='playground',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x11my_protobuf.proto\x12\nplayground\"\x1c\n\x0cImageRequest\x12\x0c\n\x04\x46ile\x18\x01 \x01(\x0c\"\x1c\n\nImageReply\x12\x0e\n\x06result\x18\x01 \x01(\t2N\n\x0cImage_parser\x12>\n\x08getImage\x12\x18.playground.ImageRequest\x1a\x16.playground.ImageReply\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x11my_protobuf.proto\x12\nplayground\")\n\tImageType\x12\x0e\n\x06\x66ormat\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x18\n\x08TextType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\x18\n\x08JSONType\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x32P\n\x0ftransactionTest\x12=\n\x0bIimageOtext\x12\x15.playground.ImageType\x1a\x15.playground.ImageType\"\x00\x62\x06proto3'
 )
 
 
 
 
-_IMAGEREQUEST = _descriptor.Descriptor(
-  name='ImageRequest',
-  full_name='playground.ImageRequest',
+_IMAGETYPE = _descriptor.Descriptor(
+  name='ImageType',
+  full_name='playground.ImageType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='File', full_name='playground.ImageRequest.File', index=0,
-      number=1, type=12, cpp_type=9, label=1,
+      name='format', full_name='playground.ImageType.format', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='playground.ImageType.data', index=1,
+      number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -51,19 +58,19 @@ _IMAGEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=33,
-  serialized_end=61,
+  serialized_end=74,
 )
 
 
-_IMAGEREPLY = _descriptor.Descriptor(
-  name='ImageReply',
-  full_name='playground.ImageReply',
+_TEXTTYPE = _descriptor.Descriptor(
+  name='TextType',
+  full_name='playground.TextType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='playground.ImageReply.result', index=0,
+      name='data', full_name='playground.TextType.data', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -81,51 +88,90 @@ _IMAGEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63,
-  serialized_end=91,
+  serialized_start=76,
+  serialized_end=100,
 )
 
-DESCRIPTOR.message_types_by_name['ImageRequest'] = _IMAGEREQUEST
-DESCRIPTOR.message_types_by_name['ImageReply'] = _IMAGEREPLY
+
+_JSONTYPE = _descriptor.Descriptor(
+  name='JSONType',
+  full_name='playground.JSONType',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='playground.JSONType.data', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=102,
+  serialized_end=126,
+)
+
+DESCRIPTOR.message_types_by_name['ImageType'] = _IMAGETYPE
+DESCRIPTOR.message_types_by_name['TextType'] = _TEXTTYPE
+DESCRIPTOR.message_types_by_name['JSONType'] = _JSONTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-ImageRequest = _reflection.GeneratedProtocolMessageType('ImageRequest', (_message.Message,), {
-  'DESCRIPTOR' : _IMAGEREQUEST,
+ImageType = _reflection.GeneratedProtocolMessageType('ImageType', (_message.Message,), {
+  'DESCRIPTOR' : _IMAGETYPE,
   '__module__' : 'my_protobuf_pb2'
-  # @@protoc_insertion_point(class_scope:playground.ImageRequest)
+  # @@protoc_insertion_point(class_scope:playground.ImageType)
   })
-_sym_db.RegisterMessage(ImageRequest)
+_sym_db.RegisterMessage(ImageType)
 
-ImageReply = _reflection.GeneratedProtocolMessageType('ImageReply', (_message.Message,), {
-  'DESCRIPTOR' : _IMAGEREPLY,
+TextType = _reflection.GeneratedProtocolMessageType('TextType', (_message.Message,), {
+  'DESCRIPTOR' : _TEXTTYPE,
   '__module__' : 'my_protobuf_pb2'
-  # @@protoc_insertion_point(class_scope:playground.ImageReply)
+  # @@protoc_insertion_point(class_scope:playground.TextType)
   })
-_sym_db.RegisterMessage(ImageReply)
+_sym_db.RegisterMessage(TextType)
+
+JSONType = _reflection.GeneratedProtocolMessageType('JSONType', (_message.Message,), {
+  'DESCRIPTOR' : _JSONTYPE,
+  '__module__' : 'my_protobuf_pb2'
+  # @@protoc_insertion_point(class_scope:playground.JSONType)
+  })
+_sym_db.RegisterMessage(JSONType)
 
 
 
-_IMAGE_PARSER = _descriptor.ServiceDescriptor(
-  name='Image_parser',
-  full_name='playground.Image_parser',
+_TRANSACTIONTEST = _descriptor.ServiceDescriptor(
+  name='transactionTest',
+  full_name='playground.transactionTest',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=93,
-  serialized_end=171,
+  serialized_start=128,
+  serialized_end=208,
   methods=[
   _descriptor.MethodDescriptor(
-    name='getImage',
-    full_name='playground.Image_parser.getImage',
+    name='IimageOtext',
+    full_name='playground.transactionTest.IimageOtext',
     index=0,
     containing_service=None,
-    input_type=_IMAGEREQUEST,
-    output_type=_IMAGEREPLY,
+    input_type=_IMAGETYPE,
+    output_type=_IMAGETYPE,
     serialized_options=None,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_IMAGE_PARSER)
+_sym_db.RegisterServiceDescriptor(_TRANSACTIONTEST)
 
-DESCRIPTOR.services_by_name['Image_parser'] = _IMAGE_PARSER
+DESCRIPTOR.services_by_name['transactionTest'] = _TRANSACTIONTEST
 
 # @@protoc_insertion_point(module_scope)

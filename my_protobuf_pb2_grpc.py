@@ -4,7 +4,7 @@ import grpc
 import my_protobuf_pb2 as my__protobuf__pb2
 
 
-class Image_parserStub(object):
+class transactionTestStub(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -14,18 +14,18 @@ class Image_parserStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.getImage = channel.unary_unary(
-        '/playground.Image_parser/getImage',
-        request_serializer=my__protobuf__pb2.ImageRequest.SerializeToString,
-        response_deserializer=my__protobuf__pb2.ImageReply.FromString,
+    self.IimageOtext = channel.unary_unary(
+        '/playground.transactionTest/IimageOtext',
+        request_serializer=my__protobuf__pb2.ImageType.SerializeToString,
+        response_deserializer=my__protobuf__pb2.ImageType.FromString,
         )
 
 
-class Image_parserServicer(object):
+class transactionTestServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def getImage(self, request, context):
+  def IimageOtext(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -33,14 +33,14 @@ class Image_parserServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_Image_parserServicer_to_server(servicer, server):
+def add_transactionTestServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'getImage': grpc.unary_unary_rpc_method_handler(
-          servicer.getImage,
-          request_deserializer=my__protobuf__pb2.ImageRequest.FromString,
-          response_serializer=my__protobuf__pb2.ImageReply.SerializeToString,
+      'IimageOtext': grpc.unary_unary_rpc_method_handler(
+          servicer.IimageOtext,
+          request_deserializer=my__protobuf__pb2.ImageType.FromString,
+          response_serializer=my__protobuf__pb2.ImageType.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'playground.Image_parser', rpc_method_handlers)
+      'playground.transactionTest', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

@@ -7,7 +7,7 @@ import my_protobuf_pb2
 import my_protobuf_pb2_grpc
 
 
-class ImageIO(my_protobuf_pb2_grpc.Image_parserServicer):
+class ImageIO(my_protobuf_pb2_grpc.transactionTestServicer):
     def __init__(self):
         self.file_counter = 1
 
@@ -16,11 +16,11 @@ class ImageIO(my_protobuf_pb2_grpc.Image_parserServicer):
         file.write(img.File)
         file.close()
         self.file_counter+=1
-        return my_protobuf_pb2.ImageReply(result="thank you very much!")
+        return my_protobuf_pb2.ImageType(format = img.format, data = img.data)
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    my_protobuf_pb2_grpc.add_Image_parserServicer_to_server(ImageIO(), server)
+    my_protobuf_pb2_grpc.add_transactionTestServicer_to_server(ImageIO(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
     server.wait_for_termination()
