@@ -15,4 +15,11 @@ gRPC Image, Json transaction testbed
 than you can check result on client side terminal. also server side output directory.
 
 
+### code notation
+/proto/my_protobuf.proto : protobuf로 정의된 data 및 transaction 타입
+
+my_protobuf_pb2.py & my_protobuf_pb2_grpc.py : 위의 protobuf file을 compile하여 생성 한 python file (API 를 생성한다고 생각하면 됨)
+
+my_server.py & my_client.py : server 및 client file
+
 thankyou.
