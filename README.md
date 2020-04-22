@@ -2,7 +2,7 @@
 gRPC Image, Json transaction testbed
 
 ### current status
-<img src="http://changseok2.iptime.org/share/share_imgs/gRPC_testbed.svg"></img><br>
+<img src="http://changseok2.iptime.org/share/share_imgs/gRPC_testbed_v1.1.svg"></img><br>
 
 ### how to test (Python server/client)
 
