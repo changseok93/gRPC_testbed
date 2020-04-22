@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11
 
 CXX_DEFINES = -DCARES_STATICLIB -D__CLANG_SUPPORT_DYN_ANNOTATION__
 
-CXX_INCLUDES = -I/home/changseok/grpc_testbed/C++/cmake/build 
+CXX_INCLUDES = -I/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build 
 

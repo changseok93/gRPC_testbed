@@ -1,6 +1,8 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <fstream>
+#include <typeinfo>
 
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
@@ -17,19 +19,55 @@ using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
 
-// using my_protobuf::ImageType;
+using my_protobuf::ImageType;
 using my_protobuf::TextType;
-// using my_protobuf::JSONType;
+using my_protobuf::JSONType;
 using my_protobuf::transactionTest;
 
 // Logic and data behind the server's behavior.
 class transactionTestServiceImpl final : public transactionTest::Service {
   Status ItextOtext(ServerContext* context, const TextType* request,
-                  TextType* reply) override {
-    std::string prefix("Hello world");
-    reply->set_data(prefix);
+                          TextType* reply) override {
+    reply->set_data(request->data());
     return Status::OK;
   }
+
+  Status IimageOimage(ServerContext* context, const ImageType* request, 
+                            ImageType* reply) override {
+
+    reply->set_format(".jpg");
+    reply->set_data(request->data());
+
+    /* 
+    experimental example
+    // load image from local system
+    std::ifstream ifs("/home/changseok/grpc_testbed/sample_data/covid-19.jpg", std::ios::binary | std::ios::in);
+
+    // calculate file size
+    ifs.seekg(0, ifs.end);
+    int length = (int)ifs.tellg();
+    ifs.seekg(0, ifs.beg);
+
+    // read image in buffer
+    char* buffer = new char [length];
+    ifs.read((char*)buffer, length);
+    ifs.close();
+
+    // set format & data
+    reply->set_format(".jpg");
+    reply->set_data(std::string(buffer, length));
+    */
+
+    return Status::OK;
+  }
+
+  Status IjsonOjson(ServerContext* context, const JSONType* request, JSONType* reply) override {
+    reply->set_data(request->data());
+
+    return Status::OK;
+  }
+
+
 };
 
 void RunServer() {
@@ -58,3 +96,4 @@ int main(int argc, char** argv) {
 
   return 0;
 }
+

@@ -1,4 +1,4 @@
-# Install script for directory: /home/changseok/grpc_testbed/C++
+# Install script for directory: /home/changseok/WORKSPACE/gRPC_testbed/C++
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/changseok/grpc_testbed/C++/cmake/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

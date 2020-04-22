@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/changseok/DCD_DB_HW/dependency/cmake-3.17.1-Linux-x86_64/bin/cmake
+CMAKE_COMMAND = /home/changseok/WORKSPACE/etc/cmake-3.17.1-Linux-x86_64/bin/cmake
 
 # The command to remove a file.
-RM = /home/changseok/DCD_DB_HW/dependency/cmake-3.17.1-Linux-x86_64/bin/cmake -E rm -f
+RM = /home/changseok/WORKSPACE/etc/cmake-3.17.1-Linux-x86_64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/changseok/grpc_testbed/C++
+CMAKE_SOURCE_DIR = /home/changseok/WORKSPACE/gRPC_testbed/C++
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/changseok/grpc_testbed/C++/cmake/build
+CMAKE_BINARY_DIR = /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -78,8 +78,8 @@ include CMakeFiles/server.dir/progress.make
 include CMakeFiles/server.dir/flags.make
 
 my_protobuf.pb.cc: ../../proto/my_protobuf.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating my_protobuf.pb.cc, my_protobuf.pb.h, my_protobuf.grpc.pb.cc, my_protobuf.grpc.pb.h"
-	/usr/local/bin/protoc-3.11.2.0 --grpc_out /home/changseok/grpc_testbed/C++/cmake/build --cpp_out /home/changseok/grpc_testbed/C++/cmake/build -I /home/changseok/grpc_testbed/C++/proto --plugin=protoc-gen-grpc="/usr/local/bin/grpc_cpp_plugin" /home/changseok/grpc_testbed/C++/proto/my_protobuf.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating my_protobuf.pb.cc, my_protobuf.pb.h, my_protobuf.grpc.pb.cc, my_protobuf.grpc.pb.h"
+	/usr/local/bin/protoc-3.11.2.0 --grpc_out /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build --cpp_out /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build -I /home/changseok/WORKSPACE/gRPC_testbed/C++/proto --plugin=protoc-gen-grpc="/usr/local/bin/grpc_cpp_plugin" /home/changseok/WORKSPACE/gRPC_testbed/C++/proto/my_protobuf.proto
 
 my_protobuf.pb.h: my_protobuf.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate my_protobuf.pb.h
@@ -92,42 +92,42 @@ my_protobuf.grpc.pb.h: my_protobuf.pb.cc
 
 CMakeFiles/server.dir/server.cc.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/server.cc.o: ../../server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/server.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cc.o -c /home/changseok/grpc_testbed/C++/server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/server.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cc.o -c /home/changseok/WORKSPACE/gRPC_testbed/C++/server.cc
 
 CMakeFiles/server.dir/server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/server.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/grpc_testbed/C++/server.cc > CMakeFiles/server.dir/server.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/WORKSPACE/gRPC_testbed/C++/server.cc > CMakeFiles/server.dir/server.cc.i
 
 CMakeFiles/server.dir/server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/grpc_testbed/C++/server.cc -o CMakeFiles/server.dir/server.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/WORKSPACE/gRPC_testbed/C++/server.cc -o CMakeFiles/server.dir/server.cc.s
 
 CMakeFiles/server.dir/my_protobuf.pb.cc.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/my_protobuf.pb.cc.o: my_protobuf.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/my_protobuf.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/my_protobuf.pb.cc.o -c /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/my_protobuf.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/my_protobuf.pb.cc.o -c /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.pb.cc
 
 CMakeFiles/server.dir/my_protobuf.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/my_protobuf.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.pb.cc > CMakeFiles/server.dir/my_protobuf.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.pb.cc > CMakeFiles/server.dir/my_protobuf.pb.cc.i
 
 CMakeFiles/server.dir/my_protobuf.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/my_protobuf.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.pb.cc -o CMakeFiles/server.dir/my_protobuf.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.pb.cc -o CMakeFiles/server.dir/my_protobuf.pb.cc.s
 
 CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o: my_protobuf.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o -c /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.o -c /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc
 
 CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc > CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc > CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.i
 
 CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/grpc_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc -o CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/my_protobuf.grpc.pb.cc -o CMakeFiles/server.dir/my_protobuf.grpc.pb.cc.s
 
 # Object files for target server
 server_OBJECTS = \
@@ -165,7 +165,7 @@ server: /usr/local/lib/libz.a
 server: /usr/local/lib/libcares.a
 server: /usr/local/lib/libaddress_sorting.so.9.0.0
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +181,6 @@ CMakeFiles/server.dir/depend: my_protobuf.pb.cc
 CMakeFiles/server.dir/depend: my_protobuf.pb.h
 CMakeFiles/server.dir/depend: my_protobuf.grpc.pb.cc
 CMakeFiles/server.dir/depend: my_protobuf.grpc.pb.h
-	cd /home/changseok/grpc_testbed/C++/cmake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/changseok/grpc_testbed/C++ /home/changseok/grpc_testbed/C++ /home/changseok/grpc_testbed/C++/cmake/build /home/changseok/grpc_testbed/C++/cmake/build /home/changseok/grpc_testbed/C++/cmake/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/changseok/WORKSPACE/gRPC_testbed/C++ /home/changseok/WORKSPACE/gRPC_testbed/C++ /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build /home/changseok/WORKSPACE/gRPC_testbed/C++/cmake/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 

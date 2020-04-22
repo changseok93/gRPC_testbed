@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package playground;
+package my_protobuf;
 
 service transactionTest {
 
