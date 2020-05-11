@@ -18,7 +18,7 @@ than you can check result on client side terminal. also server side output direc
 ### how to test (C++ server)
 1. clone this repository in your $WORKSPACE ( git clone https://github.com/changseok93/grpc_testbed )
 2. move to grpc_testbed (cd grpc_testbed/C++/cmake/build)
-3. run cmake [cmake -DCMAKE_PREFIX_PATH=../local ../..]
+3. run cmake [cmake -DCMAKE_PREFIX_PATH=../../local ../..]
 4. build [make]
 5. open another terminal and move to $WORKSPACE/grpc_test/Python
 6. run server in terminal#1 [./server]
