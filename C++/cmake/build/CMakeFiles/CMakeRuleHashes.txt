@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-dbb450913e8d20fc69f635017d55abfd my_protobuf.pb.cc
