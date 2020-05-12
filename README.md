@@ -16,8 +16,8 @@ gRPC Image, Json transaction testbed
 than you can check result on client side terminal. also server side output directory.
 
 ### how to test (C++ server)
-1. clone this repository in your $WORKSPACE ( git clone https://github.com/changseok93/grpc_testbed )
-2. move to grpc_testbed (cd grpc_testbed/C++/cmake/build)
+1. clone this repository in your $WORKSPACE ( git clone https://github.com/changseok93/grpc_testbed ) 
+2. create build directory and move (mkdir -p grpc_testbed/C++/cmake/build & cd grpc_testbed/C++/cmake/build)
 3. run cmake [cmake -DCMAKE_PREFIX_PATH=./local ../..]
 4. build [make]
 5. open another terminal and move to $WORKSPACE/grpc_test/Python
@@ -27,10 +27,10 @@ than you can check result on client side terminal. also server side output direc
 
 
 ### code notation
-/proto/my_protobuf.proto : protobuf로 정의된 data 및 transaction 타입
+/proto/my_protobuf.proto : defines data & transaction type in protobuf3 language.
 
-my_protobuf_pb2.py & my_protobuf_pb2_grpc.py : 위의 protobuf file을 compile하여 생성 한 python file (API 를 생성한다고 생각하면 됨)
+my_protobuf_pb2.py & my_protobuf_pb2_grpc.py : auto generated gRPC API files
 
-my_server.py & my_client.py : server 및 client file
+my_server.py & my_client.py : server & client files
 
-thankyou.
+
